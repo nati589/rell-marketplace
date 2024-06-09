@@ -1,15 +1,15 @@
 blockchains:
-  rell-marketplace:
+  staking-app:
     module: main
     moduleArgs:
-      rell_marketplace:
+      staking_app:
           dapp_account_signer: x"023D41B457042ABF108E9B196F0F1BFCF97C9A8A536D8484F29009CDBD3E042315"
       lib.ft4.accounts:
         rate_limit:
           points_at_account_creation: 2
     test:
       modules:
-        - rell_marketplace_test
+        - staking_app_test
 libs:
   ft4:
     registry: https://bitbucket.org/chromawallet/ft3-lib
@@ -23,4 +23,4 @@ database:
   schema: schema_rell_marketplace
 test:
   modules:
-    - rell_marketplace.test
+    - staking_app.test
